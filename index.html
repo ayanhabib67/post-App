@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+      </head>
+</head>
+<body>
+    <div id="login" class="form-container animate__animated animate__backInDown">
+        <h2>Login</h2>
+        <form>
+            <input type="email" class="input-field animate__animated animate__backInDown" placeholder="Enter your email" id="logEmail" required>
+            <input type="password" class="input-field animate__animated animate__backInDown" placeholder="Enter your password" id="logPassword" required>
+            <button type="submit" onclick="logIn()" class="button animate__animated animate__backInDown">Login</button>
+        </form>
+        <a href="#" class="link">Forgot password?</a>
+        
+        <a href="#signup" class="link" onclick="toggleForms()">Don't have an account? Sign Up</a>
+    </div>
+    <div id="signup" class="form-container animate__animated animate__backInDown" style="display: none;">
+        <h2>Sign Up</h2>
+        <form>
+            <input type="text" class="input-field animate__animated animate__backInDown" placeholder="Enter your name" id="name1" required>
+            <input type="email" class="input-field animate__animated animate__backInDown" placeholder="Enter your email" id="email" required>
+            <input type="password" class="input-field animate__animated animate__backInDown" placeholder="Create a password"id="password"required>
+            
+            <button type="submit" onclick="saveData()" class="button">Sign Up</button>
+        </form>
+        <a href="#login" class="link" onclick="toggleForms()">Already have an account? Login</a>
+    </div>
+
+    <footer>
+        <p class="animate__animated animate__backInDown">Made by <a href="https://github.com/ayanhabib67?tab=repositories" target="_blank">Ayan Habib</a></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook-Style Post App</title>
+    <link rel="stylesheet" href="post.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+    <div class="container animate__animated animate__backInDown">
+        <div class="navbar">
+            <span>Facebook</span>
+            <div class="profile-pic"></div>
+        </div>
+        <div class="post-box">
+            <textarea id="postInput" placeholder="What's on your mind?"></textarea>
+        </div>
+        <input type="file" id="imageInput" accept="image">
+        <div class="controls">
+            <div class="color-picker">
+                <div class="color-option" style="background-color: red;" onclick="setColor('red')"></div>
+                <div class="color-option" style="background-color: blue;" onclick="setColor('blue')"></div>
+                <div class="color-option" style="background-color: green;" onclick="setColor('green')"></div>
+            </div>
+            <div class="emoji-picker">
+                <span onclick="addEmoji('😊')">😊</span>
+                <span onclick="addEmoji('😂')">😂</span>
+                <span onclick="addEmoji('❤️')">❤️</span>
+                <span onclick="addEmoji('👍')">👍</span>
+            </div>
+            <button class="post-btn" onclick="addPost()">Post</button>
+        </div>
+        <div class="feed" id="feed"></div>
+    </div>
+    
+   
+ <script src="post.js"></script>   
+</body>
+</html>
+
